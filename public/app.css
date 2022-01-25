@@ -816,13 +816,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgba(186, 58, 58, 0.5);
 }
 .bg-curtis {
-  background-image: url('/img/curtis-background.png');
+  background-image: url('./img/curtis-background.png');
 }
 .bg-abby {
-  background-image: url('/img/abby-background.png');
+  background-image: url('./img/abby-background.png');
 }
 .bg-taliqua {
-  background-image: url('/img/taliqua-background.png');
+  background-image: url('./img/taliqua-background.png');
 }
 .bg-cover {
   background-size: cover;
@@ -966,6 +966,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
+.hover\:bg-black:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-red:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(240 83 77 / var(--tw-bg-opacity));
@@ -973,11 +978,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hover\:bg-darkred:hover {
   background-color: rgb(186, 58, 58, 1);
-}
-
-.hover\:bg-black:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
 }
 
 .hover\:text-white:hover {

@@ -17,11 +17,14 @@ module.exports = {
       'lightgrey' : 'rgba(0, 0, 0, 0.2)'
     },
     extend: {
-      backgroundImage: theme => ({
+      borderRadius: {
+        'sm': '3px',
+      },
+      backgroundImage: {
         'abby': "url('/img/abby-background.png')",
         'curtis': "url('/img/curtis-background.png')",
         'taliqua': "url('/img/taliqua-background.png')",
-      })
+      }
     },
   },
   plugins: [],

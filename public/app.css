@@ -475,7 +475,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   input {
   margin-bottom: 1rem;
   width: 100%;
-  border-radius: 0.125rem;
+  border-radius: 3px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.5rem;
@@ -572,13 +572,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 .carousel-item {
   margin-top: 2rem;
-  margin-right: 4rem;
+  margin-right: 3rem;
   display: flex;
   aspect-ratio: 1 / 1;
   width: 50%;
   flex-direction: column;
   justify-content: center;
-  border-radius: 0.125rem;
+  border-radius: 3px;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding: 0.5rem;
@@ -621,7 +621,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     text-align: center;
     color: #111111;
 }
-.carousel li:not(:last-child):after {
+.carousel-item:not(:last-child):after {
   font-size: 2.25rem;
   line-height: 2.5rem;
   --tw-text-opacity: 1;
@@ -633,7 +633,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .griddy-list-item {
   margin-bottom: 0.5rem;
-  border-radius: 0.125rem;
+  border-radius: 3px;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.2);
   padding-left: 1rem;
@@ -660,6 +660,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
+}
+.accordion-title {
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+    cursor: pointer;
 }
 .accordion[open] .accordion-title {
   background-color: rgb(186, 58, 58, 1);
@@ -742,6 +750,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grow-0 {
   flex-grow: 0;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -767,7 +778,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow-x: hidden;
 }
 .rounded-sm {
-  border-radius: 0.125rem;
+  border-radius: 3px;
 }
 .border {
   border-width: 1px;
@@ -857,11 +868,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pt-0 {
   padding-top: 0px;
 }
-.pb-0 {
-  padding-bottom: 0px;
-}
 .pb-8 {
   padding-bottom: 2rem;
+}
+.pb-4 {
+  padding-bottom: 1rem;
 }
 .pt-16 {
   padding-top: 4rem;
@@ -871,9 +882,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pt-8 {
   padding-top: 2rem;
-}
-.pb-4 {
-  padding-bottom: 1rem;
 }
 .pb-6 {
   padding-bottom: 1.5rem;
@@ -950,9 +958,31 @@ Ensure the default browser behavior of the `hidden` attribute.
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
 }
+.transition-colors {
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.hover\:bg-red:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 83 77 / var(--tw-bg-opacity));
+}
 
 .hover\:bg-darkred:hover {
   background-color: rgb(186, 58, 58, 1);
+}
+
+.hover\:bg-black:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
@@ -1058,6 +1088,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:pb-0 {
+    padding-bottom: 0px;
   }
 
   .lg\:pb-20 {
